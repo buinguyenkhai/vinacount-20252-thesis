@@ -1,0 +1,12 @@
+{
+  "_fixture_meta": {
+    "scenario": "unresolvable_company_identifier"
+  },
+  "error": {
+    "code": "filing_intent_invalid",
+    "field_errors": {
+      "company_identifier": "Use a configured ticker or issuer lookup key."
+    },
+    "message": "Company identifier could not be resolved for the controlled demo universe."
+  }
+}

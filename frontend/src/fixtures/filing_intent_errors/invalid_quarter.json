@@ -1,0 +1,12 @@
+{
+  "_fixture_meta": {
+    "scenario": "invalid_quarter"
+  },
+  "error": {
+    "code": "filing_intent_invalid",
+    "field_errors": {
+      "target_quarter": "Must be 1, 2, 3, or 4."
+    },
+    "message": "Quarter must be between 1 and 4."
+  }
+}

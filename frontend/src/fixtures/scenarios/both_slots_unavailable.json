@@ -1,0 +1,139 @@
+{
+  "_fixture_meta": {
+    "scenario": "both_slots_unavailable"
+  },
+  "allowed_actions": [
+    {
+      "action": "retry_source_discovery",
+      "href": "/runtime-runs/run_20260622_both_unavail/source-confirmation",
+      "method": "POST",
+      "scope": {
+        "source_slots": ["target", "prior_year_same_quarter"]
+      }
+    },
+    {
+      "action": "stop_run",
+      "href": "/runtime-runs/run_20260622_both_unavail/actions/stop",
+      "method": "POST"
+    }
+  ],
+  "can_resume": false,
+  "created_at": "2026-06-22T10:00:00Z",
+  "current_stage": "source_confirmation",
+  "elapsed_seconds": 75,
+  "error": null,
+  "filing_intent": {
+    "company_identifier": "ABC",
+    "company_name_vi": null,
+    "report_basis_preference": "consolidated",
+    "target_fiscal_year": 2025,
+    "target_quarter": 3
+  },
+  "final_report": {
+    "available": false,
+    "format": null,
+    "generated_at": null,
+    "href": null,
+    "report_id": null
+  },
+  "recoverable": false,
+  "run_id": "run_20260622_both_unavail",
+  "runtime_config": {
+    "report_synthesis_model": {
+      "id": "deepseek-v4-flash",
+      "label": "DeepSeek V4 Flash",
+      "provider": "deepseek",
+      "selection": "default"
+    }
+  },
+  "schema_version": "runtime_run_view.v1",
+  "source_confirmation": {
+    "confirmable": false,
+    "hitl_boundary": "source_identity_confirmation_before_extraction_or_cached_reuse",
+    "package_warnings": [],
+    "slots": [
+      {
+        "candidate": null,
+        "rejection": null,
+        "role": "target",
+        "status": "unavailable",
+        "warnings": [
+          {
+            "artifact_refs": [],
+            "code": "missing_exact_source",
+            "message": "No matching financial statement found on Vietstock for this company and period.",
+            "severity": "warning",
+            "source_slot_role": "target",
+            "stage_id": "source_discovery"
+          }
+        ]
+      },
+      {
+        "candidate": null,
+        "rejection": null,
+        "role": "prior_year_same_quarter",
+        "status": "unavailable",
+        "warnings": [
+          {
+            "artifact_refs": [],
+            "code": "missing_exact_source",
+            "message": "No matching financial statement found on Vietstock for this company and period.",
+            "severity": "warning",
+            "source_slot_role": "prior_year_same_quarter",
+            "stage_id": "source_discovery"
+          }
+        ]
+      }
+    ],
+    "status": "ready_for_review"
+  },
+  "stages": [
+    {
+      "completed_at": "2026-06-22T10:01:15Z",
+      "counts": null,
+      "progress": null,
+      "stage_id": "source_discovery",
+      "started_at": "2026-06-22T10:00:05Z",
+      "status": "completed",
+      "summary": "Live Vietstock source discovery completed with no results",
+      "warnings": [
+        {
+          "artifact_refs": [],
+          "code": "missing_exact_source",
+          "message": "No matching financial statements found on Vietstock for either filing slot.",
+          "severity": "warning",
+          "source_slot_role": null,
+          "stage_id": "source_discovery"
+        }
+      ]
+    },
+    {
+      "completed_at": null,
+      "counts": null,
+      "progress": null,
+      "stage_id": "source_confirmation",
+      "started_at": "2026-06-22T10:01:15Z",
+      "status": "active",
+      "summary": "Waiting for source identity confirmation",
+      "warnings": []
+    },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "cache_lookup", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "extraction", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "tool_analysis", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "detector_assessment", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "aggregation", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "report_generation", "started_at": null, "status": "pending", "summary": null, "warnings": [] }
+  ],
+  "status": "awaiting_source_confirmation",
+  "updated_at": "2026-06-22T10:01:15Z",
+  "warnings": [
+    {
+      "artifact_refs": [],
+      "code": "missing_exact_source",
+      "message": "No matching financial statements found on Vietstock. You can retry source discovery or stop the analysis.",
+      "severity": "warning",
+      "source_slot_role": null,
+      "stage_id": "source_discovery"
+    }
+  ]
+}

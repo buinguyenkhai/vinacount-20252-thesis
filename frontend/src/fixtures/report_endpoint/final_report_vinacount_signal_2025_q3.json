@@ -1,0 +1,232 @@
+{
+  "_fixture_meta": {
+    "scenario": "final_report_endpoint"
+  },
+  "artifact_refs": [
+    {
+      "artifact_id": "artifact_final_report_json",
+      "kind": "final_report_json",
+      "sha256": "49cc031dcf94860df30577271fc3addf2f76c96b94285ac6e465911588a1fe52"
+    }
+  ],
+  "generated_at": "2026-06-17T09:08:00Z",
+  "report_id": "FINAL_VINACOUNT_SIGNAL_2025_Q3",
+  "report_json": {
+    "audit_trail": {
+      "assessment_ids": [
+        "ASSESS_VCF_2025_Q3_001",
+        "ASSESS_VCF_2025_Q3_002"
+      ],
+      "candidate_ids": [
+        "CAND_VCF_2025_Q3_REV_REC_001",
+        "CAND_VCF_2025_Q3_EARN_CASH_001"
+      ],
+      "gating_record_count": 4,
+      "tool_result_ids": [
+        "TOOL_VCF_2025_Q3_REV_GROWTH_001",
+        "TOOL_VCF_2025_Q3_REC_VS_REV_001",
+        "TOOL_VCF_2025_Q3_EARN_CASH_001"
+      ]
+    },
+    "executive_summary": [
+      "The system identified 1 supported grouped risk signal.",
+      "The system identified 1 weakly supported possible risk signal.",
+      "Human review is recommended for supported and weakly supported items.",
+      "The report is limited to fixture-based report evidence."
+    ],
+    "grouped_findings": [
+      {
+        "assessment_ids": [
+          "ASSESS_VCF_2025_Q3_001"
+        ],
+        "candidate_ids": [
+          "CAND_VCF_2025_Q3_REV_REC_001"
+        ],
+        "evidence_refs": [
+          {
+            "evidence_ref_type": "tool_result",
+            "ref_id": "TOOL_VCF_2025_Q3_REV_GROWTH_001",
+            "role": "supporting",
+            "summary": "Revenue growth rate exceeded receivables growth, indicating potential timing mismatch",
+            "source_document_id": null,
+            "source_slot_role": null,
+            "page_number": null,
+            "source_excerpt": null,
+            "geometry": null
+          },
+          {
+            "evidence_ref_type": "table_cell",
+            "ref_id": "VINACOUNT_SIGNAL_2025_Q3:CELL_REVENUE",
+            "role": "supporting",
+            "summary": "Revenue: 125,432,000,000 VND (Income Statement)",
+            "source_document_id": "src_vcf_2025_q3_consolidated_vi",
+            "source_slot_role": "target",
+            "page_number": 3,
+            "source_excerpt": "Doanh thu bán hàng và cung cấp dịch vụ    125,432,000,000",
+            "geometry": null
+          },
+          {
+            "evidence_ref_type": "table_cell",
+            "ref_id": "VINACOUNT_SIGNAL_2025_Q3:CELL_RECEIVABLES",
+            "role": "supporting",
+            "summary": "Short-term receivables: 98,765,000,000 VND (Balance Sheet)",
+            "source_document_id": "src_vcf_2025_q3_consolidated_vi",
+            "source_slot_role": "target",
+            "page_number": 5,
+            "source_excerpt": "Phải thu ngắn hạn của khách hàng    98,765,000,000",
+            "geometry": null
+          }
+        ],
+        "final_severity": "medium",
+        "finding_id": "F-001",
+        "human_review_recommendation": "recommended",
+        "limitations": [
+          "The finding is based only on fixture-visible evidence."
+        ],
+        "primary_risk_category": "revenue_income_recognition_risk",
+        "risk_categories": [
+          "revenue_income_recognition_risk"
+        ],
+        "summary": "Revenue and receivables both increased materially in the fixture evidence, so the item is retained for human review.",
+        "support_levels": [
+          "supported"
+        ],
+        "title": "Revenue quality risk signal",
+        "tool_refs": [
+          "TOOL_VCF_2025_Q3_REV_GROWTH_001",
+          "TOOL_VCF_2025_Q3_REC_VS_REV_001"
+        ]
+      }
+    ],
+    "insufficient_evidence_or_data_gaps": [],
+    "limitations": [
+      "The report is limited to fixture-based report evidence.",
+      "External context is excluded.",
+      "The target filing assurance context is unaudited."
+    ],
+    "metadata": {
+      "business_context_tags": [
+        "manufacturing_inventory"
+      ],
+      "canonical_source_document_id": "src_vcf_2025_q3_consolidated_vi",
+      "company_name": "Vinacount Fixture Manufacturing JSC",
+      "currency": "VND",
+      "filing_status": "original",
+      "period": "2025-Q3",
+      "report_assurance_type": "unaudited",
+      "report_basis": "consolidated",
+      "report_period_type": "quarterly",
+      "report_profile": "standard_corporate",
+      "source_file": "fixtures/VCF_2025_Q3_fixture.pdf",
+      "unit": "million_vnd"
+    },
+    "method_and_scope": {
+      "evidence_scope": "Structured table, note, variance explanation, tool, candidate, and assessment artifacts.",
+      "excluded_scope": [
+        "No real PDF or OCR extraction.",
+        "No source fetching.",
+        "No external market, news, enforcement, macro, or analyst data."
+      ],
+      "input_scope": "Compact runtime fixture source package only.",
+      "reporting_rule": "Final findings are based only on supported or weakly supported assessments."
+    },
+    "overall_assessment": {
+      "confidence_summary": "Based on deterministic assessment over fixture-visible evidence.",
+      "highest_severity": "medium",
+      "human_review_recommended": true,
+      "overall_review_status": "risk_signals_identified",
+      "primary_risk_category": "revenue_income_recognition_risk",
+      "secondary_risk_categories": [
+        "earnings_cashflow_mismatch"
+      ]
+    },
+    "report_basis": "fixture_public_detector_assessments",
+    "report_id": "FINAL_VINACOUNT_SIGNAL_2025_Q3",
+    "reviewed_candidate_audit": [
+      {
+        "assessment_id": "ASSESS_VCF_2025_Q3_001",
+        "candidate_id": "CAND_VCF_2025_Q3_REV_REC_001",
+        "candidate_priority": "high",
+        "detector_severity": "medium",
+        "evidence_refs": [
+          {
+            "evidence_ref_type": "tool_result",
+            "ref_id": "TOOL_VCF_2025_Q3_REV_GROWTH_001",
+            "role": "supporting",
+            "summary": "Revenue growth rate exceeded receivables growth, indicating potential timing mismatch",
+            "source_document_id": null,
+            "source_slot_role": null,
+            "page_number": null,
+            "source_excerpt": null,
+            "geometry": null
+          }
+        ],
+        "rationale_short": "The cited visible evidence supports retaining this risk signal.",
+        "risk_category": "revenue_income_recognition_risk",
+        "status": "included_in_grouped_findings",
+        "support_level": "supported",
+        "tool_refs": [
+          "TOOL_VCF_2025_Q3_REV_GROWTH_001",
+          "TOOL_VCF_2025_Q3_REC_VS_REV_001"
+        ]
+      },
+      {
+        "assessment_id": "ASSESS_VCF_2025_Q3_002",
+        "candidate_id": "CAND_VCF_2025_Q3_EARN_CASH_001",
+        "candidate_priority": "medium",
+        "detector_severity": "low",
+        "evidence_refs": [
+          {
+            "evidence_ref_type": "tool_result",
+            "ref_id": "TOOL_VCF_2025_Q3_EARN_CASH_001",
+            "role": "supporting",
+            "summary": "Operating cash flow lagged behind reported profit growth",
+            "source_document_id": null,
+            "source_slot_role": null,
+            "page_number": null,
+            "source_excerpt": null,
+            "geometry": null
+          }
+        ],
+        "rationale_short": "The cited visible evidence is limited but relevant.",
+        "risk_category": "earnings_cashflow_mismatch",
+        "status": "included_in_weak_or_limited_signals",
+        "support_level": "weakly_supported",
+        "tool_refs": [
+          "TOOL_VCF_2025_Q3_EARN_CASH_001"
+        ]
+      }
+    ],
+    "target_report_id": "VINACOUNT_SIGNAL_2025_Q3",
+    "weak_or_limited_signals": [
+      {
+        "assessment_id": "ASSESS_VCF_2025_Q3_002",
+        "candidate_id": "CAND_VCF_2025_Q3_EARN_CASH_001",
+        "evidence_refs": [
+          {
+            "evidence_ref_type": "tool_result",
+            "ref_id": "TOOL_VCF_2025_Q3_EARN_CASH_001",
+            "role": "supporting",
+            "summary": "Operating cash flow lagged behind reported profit growth",
+            "source_document_id": null,
+            "source_slot_role": null,
+            "page_number": null,
+            "source_excerpt": null,
+            "geometry": null
+          }
+        ],
+        "final_severity": "low",
+        "missing_or_limited_context": "The source package lacks enough context for a stronger conclusion.",
+        "risk_category": "earnings_cashflow_mismatch",
+        "summary": "Profit improved while operating cash flow lagged in the compact fixture evidence.",
+        "support_level": "weakly_supported",
+        "tool_refs": [
+          "TOOL_VCF_2025_Q3_EARN_CASH_001"
+        ]
+      }
+    ]
+  },
+  "report_markdown": "# Accounting Irregularity Risk-Signal Review\n\n## Report Metadata\n\n- company_name: Vinacount Fixture Manufacturing JSC\n- period: 2025-Q3\n- report_basis: consolidated\n\n## Executive Summary\n\n- The system identified 1 supported grouped risk signal.\n- The system identified 1 weakly supported possible risk signal.\n- Human review is recommended for supported and weakly supported items.\n- The report is limited to fixture-based report evidence.\n",
+  "run_id": "run_20260617_001",
+  "schema_version": "canonical_final_report.v1"
+}

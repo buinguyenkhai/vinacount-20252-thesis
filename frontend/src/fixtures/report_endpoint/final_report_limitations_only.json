@@ -1,0 +1,79 @@
+{
+  "_fixture_meta": {
+    "scenario": "final_report_limitations_only"
+  },
+  "artifact_refs": [
+    {
+      "artifact_id": "artifact_final_report_json",
+      "kind": "final_report_json",
+      "sha256": "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3"
+    }
+  ],
+  "generated_at": "2026-06-22T10:05:00Z",
+  "report_id": "FINAL_VINACOUNT_SIGNAL_2025_Q3_LIMONLY",
+  "report_json": {
+    "audit_trail": {
+      "assessment_ids": [],
+      "candidate_ids": [],
+      "gating_record_count": 0,
+      "tool_result_ids": []
+    },
+    "executive_summary": [
+      "The system did not identify supported risk signals.",
+      "Evidence extraction was limited to table surfaces only.",
+      "Human review is recommended due to evidence-surface limitations."
+    ],
+    "grouped_findings": [],
+    "insufficient_evidence_or_data_gaps": [],
+    "limitations": [
+      "Related-party evidence was not extracted into source-bound ReportMemory objects. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_RELATED_PARTY_UNSUPPORTED.",
+      "Notes evidence surface status is not_extracted_yet. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_NOTES_NOT_EXTRACTED.",
+      "Variance explanation evidence surface status is unsupported_by_extraction_path. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_VARIANCE_UNSUPPORTED.",
+      "Extraction quality evidence surface status is ambiguous_failed_closed. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_EXTRACTION_QUALITY_AMBIGUOUS.",
+      "At least one reviewed candidate had insufficient visible evidence."
+    ],
+    "metadata": {
+      "company_name": "Vinacount Fixture Manufacturing JSC",
+      "currency": "VND",
+      "filing_status": "original",
+      "period": "2025-Q3",
+      "report_basis": "consolidated",
+      "ticker": "VCF"
+    },
+    "method_and_scope": {
+      "evidence_scope": "Structured table artifacts only. Notes, variance explanations, and related-party evidence not extracted.",
+      "excluded_scope": [
+        "No external market, news, enforcement, macro, or analyst data."
+      ],
+      "input_scope": "Source-confirmed filing package.",
+      "reporting_rule": "Final findings are based only on supported or weakly supported assessments."
+    },
+    "overall_assessment": {
+      "confidence_summary": "Evidence extraction was limited to table surfaces. Multiple evidence-surface limitations apply.",
+      "highest_severity": "none",
+      "human_review_recommended": true,
+      "overall_review_status": "insufficient_evidence_for_overall_assessment",
+      "primary_risk_category": null,
+      "secondary_risk_categories": []
+    },
+    "report_id": "FINAL_VINACOUNT_SIGNAL_2025_Q3_LIMONLY",
+    "reviewed_candidate_audit": [
+      {
+        "candidate_id": "CAND_VCF_2025_Q3_REV_REC_001",
+        "assessment_id": "ASSESS_VCF_2025_Q3_001",
+        "risk_category": "revenue_income_recognition_risk",
+        "support_level": "insufficient_evidence",
+        "detector_severity": "unknown",
+        "candidate_priority": "medium",
+        "tool_refs": [],
+        "evidence_refs": [],
+        "status": "retained_as_data_gap",
+        "rationale_short": "Insufficient table-only evidence to assess this risk signal."
+      }
+    ],
+    "weak_or_limited_signals": []
+  },
+  "report_markdown": "# Accounting Irregularity Risk-Signal Review\n\n## Limitations\n\n- Related-party evidence was not extracted into source-bound ReportMemory objects. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_RELATED_PARTY_UNSUPPORTED.\n- Notes evidence surface status is not_extracted_yet. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_NOTES_NOT_EXTRACTED.\n- Variance explanation evidence surface status is unsupported_by_extraction_path. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_VARIANCE_UNSUPPORTED.\n- Extraction quality evidence surface status is ambiguous_failed_closed. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_EXTRACTION_QUALITY_AMBIGUOUS.\n- At least one reviewed candidate had insufficient visible evidence.\n",
+  "run_id": "run_20260622_002",
+  "schema_version": "canonical_final_report.v1"
+}

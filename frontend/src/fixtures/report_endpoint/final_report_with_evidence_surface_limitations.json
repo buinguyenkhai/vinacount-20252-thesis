@@ -1,0 +1,94 @@
+{
+  "_fixture_meta": {
+    "scenario": "final_report_with_evidence_surface_limitations"
+  },
+  "artifact_refs": [
+    {
+      "artifact_id": "artifact_final_report_json",
+      "kind": "final_report_json",
+      "sha256": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2"
+    }
+  ],
+  "generated_at": "2026-06-22T10:00:00Z",
+  "report_id": "FINAL_VINACOUNT_SIGNAL_2025_Q3_SURF",
+  "report_json": {
+    "audit_trail": {
+      "assessment_ids": ["ASSESS_VCF_2025_Q3_001"],
+      "candidate_ids": ["CAND_VCF_2025_Q3_REV_REC_001"],
+      "gating_record_count": 2,
+      "tool_result_ids": ["TOOL_VCF_2025_Q3_REV_GROWTH_001"]
+    },
+    "executive_summary": [
+      "The system identified 1 supported grouped risk signal.",
+      "Human review is recommended.",
+      "Related-party evidence was not extracted into source-bound analysis objects."
+    ],
+    "grouped_findings": [
+      {
+        "assessment_ids": ["ASSESS_VCF_2025_Q3_001"],
+        "candidate_ids": ["CAND_VCF_2025_Q3_REV_REC_001"],
+        "evidence_refs": [
+          {
+            "evidence_ref_type": "tool_result",
+            "ref_id": "TOOL_VCF_2025_Q3_REV_GROWTH_001",
+            "role": "supporting",
+            "source_document_id": "src_vcf_2025_q3_consolidated_vi",
+            "source_slot_role": "target",
+            "page_number": 3,
+            "source_excerpt": "Doanh thu ban hang va cung cap dich vu    125,432,000,000",
+            "geometry": null
+          }
+        ],
+        "final_severity": "medium",
+        "finding_id": "F-001",
+        "human_review_recommendation": "recommended",
+        "limitations": [
+          "The finding is based only on table-visible evidence."
+        ],
+        "primary_risk_category": "revenue_income_recognition_risk",
+        "risk_categories": ["revenue_income_recognition_risk"],
+        "summary": "Revenue increased materially in the target quarter.",
+        "support_levels": ["supported"],
+        "title": "Revenue quality risk signal",
+        "tool_refs": ["TOOL_VCF_2025_Q3_REV_GROWTH_001"]
+      }
+    ],
+    "insufficient_evidence_or_data_gaps": [],
+    "limitations": [
+      "The report is limited to table-visible evidence from structured extraction.",
+      "Related-party evidence was not extracted into source-bound ReportMemory objects. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_RELATED_PARTY_UNSUPPORTED.",
+      "Accounting-policy evidence surface status is unsupported_by_extraction_path. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_ACCOUNTING_POLICY_UNSUPPORTED.",
+      "External context is excluded."
+    ],
+    "metadata": {
+      "company_name": "Vinacount Fixture Manufacturing JSC",
+      "currency": "VND",
+      "filing_status": "original",
+      "period": "2025-Q3",
+      "report_basis": "consolidated",
+      "ticker": "VCF"
+    },
+    "method_and_scope": {
+      "evidence_scope": "Structured table and tool artifacts. Notes and variance explanations partially supported.",
+      "excluded_scope": [
+        "No external market, news, enforcement, macro, or analyst data."
+      ],
+      "input_scope": "Source-confirmed filing package.",
+      "reporting_rule": "Final findings are based only on supported or weakly supported assessments."
+    },
+    "overall_assessment": {
+      "confidence_summary": "Based on table-only evidence with evidence-surface limitations.",
+      "highest_severity": "medium",
+      "human_review_recommended": true,
+      "overall_review_status": "risk_signals_identified",
+      "primary_risk_category": "revenue_income_recognition_risk",
+      "secondary_risk_categories": []
+    },
+    "report_id": "FINAL_VINACOUNT_SIGNAL_2025_Q3_SURF",
+    "reviewed_candidate_audit": [],
+    "weak_or_limited_signals": []
+  },
+  "report_markdown": "# Accounting Irregularity Risk-Signal Review\n\n## Limitations\n\n- The report is limited to table-visible evidence from structured extraction.\n- Related-party evidence was not extracted into source-bound ReportMemory objects. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_RELATED_PARTY_UNSUPPORTED.\n- Accounting-policy evidence surface status is unsupported_by_extraction_path. Evidence ref: VINACOUNT_SIGNAL_2025_Q3:LIMIT_ACCOUNTING_POLICY_UNSUPPORTED.\n- External context is excluded.\n",
+  "run_id": "run_20260622_001",
+  "schema_version": "canonical_final_report.v1"
+}

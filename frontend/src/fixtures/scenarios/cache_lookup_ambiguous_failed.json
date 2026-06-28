@@ -1,0 +1,212 @@
+{
+  "_fixture_meta": {
+    "scenario": "cache_lookup_ambiguous_failed"
+  },
+  "allowed_actions": [],
+  "can_resume": false,
+  "created_at": "2026-06-20T10:00:00Z",
+  "current_stage": null,
+  "elapsed_seconds": 145,
+  "error": {
+    "artifact_refs": [],
+    "can_resume": false,
+    "code": "cache_lookup_failed",
+    "detail": "Ambiguous refreshed source set for target role; cannot determine canonical source.",
+    "message": "Could not retrieve previously saved analysis data.",
+    "recoverable": false,
+    "stage_id": "cache_lookup"
+  },
+  "filing_intent": {
+    "company_identifier": "VCF",
+    "company_name_vi": "Cong ty Co phan San xuat Vinacount",
+    "report_basis_preference": "consolidated",
+    "target_fiscal_year": 2026,
+    "target_quarter": 1
+  },
+  "final_report": {
+    "available": false,
+    "format": null,
+    "generated_at": null,
+    "href": null,
+    "report_id": null
+  },
+  "recoverable": false,
+  "run_id": "run_20260620_cache_ambiguous",
+  "schema_version": "runtime_run_view.v1",
+  "source_confirmation": {
+    "confirmable": false,
+    "hitl_boundary": "source_identity_confirmation_before_extraction_or_cached_reuse",
+    "package_warnings": [],
+    "slots": [
+      {
+        "candidate": {
+          "audit_references": {
+            "canonical_source_document_id": "src_vcf_2026_q1_consolidated_vi",
+            "event_id": "fixture_event_vcf_2026_q1",
+            "package_id": "pkg_vcf_2026_q1_consolidated"
+          },
+          "classification_evidence": [
+            "First page shows consolidated quarterly financial statements."
+          ],
+          "company_name_vi": "Cong ty Co phan San xuat Vinacount",
+          "document_type": "quarterly_bctc",
+          "file_size_bytes": 4100000,
+          "filing_status": "original",
+          "first_page_identity": {
+            "visible_basis_clue": "Hop nhat",
+            "visible_company_name": "Cong ty Co phan San xuat Vinacount",
+            "visible_period": "Quy 1 nam 2026"
+          },
+          "fiscal_year": 2026,
+          "is_searchable_version": true,
+          "language": "vi",
+          "page_count": 62,
+          "period_label": "Q1 2026",
+          "quarter": 1,
+          "report_basis": "consolidated",
+          "source_document_id": "src_vcf_2026_q1_consolidated_vi",
+          "source_name": "Vinacount Fixture Source",
+          "source_origin": "FixtureSpine",
+          "source_url": "https://example.invalid/vcf/2026-q1.pdf",
+          "ticker": "VCF",
+          "visible_filing_label": "Bao cao tai chinh hop nhat quy 1 nam 2026"
+        },
+        "rejection": null,
+        "role": "target",
+        "status": "locked",
+        "warnings": []
+      },
+      {
+        "candidate": {
+          "audit_references": {
+            "canonical_source_document_id": "src_vcf_2025_q1_consolidated_vi",
+            "event_id": "fixture_event_vcf_2025_q1",
+            "package_id": "pkg_vcf_2025_q1_consolidated"
+          },
+          "classification_evidence": [
+            "First page shows consolidated quarterly financial statements."
+          ],
+          "company_name_vi": "Cong ty Co phan San xuat Vinacount",
+          "document_type": "quarterly_bctc",
+          "file_size_bytes": 3900000,
+          "filing_status": "original",
+          "first_page_identity": {
+            "visible_basis_clue": "Hop nhat",
+            "visible_company_name": "Cong ty Co phan San xuat Vinacount",
+            "visible_period": "Quy 1 nam 2025"
+          },
+          "fiscal_year": 2025,
+          "is_searchable_version": true,
+          "language": "vi",
+          "page_count": 58,
+          "period_label": "Q1 2025",
+          "quarter": 1,
+          "report_basis": "consolidated",
+          "source_document_id": "src_vcf_2025_q1_consolidated_vi",
+          "source_name": "Vinacount Fixture Source",
+          "source_origin": "FixtureSpine",
+          "source_url": "https://example.invalid/vcf/2025-q1.pdf",
+          "ticker": "VCF",
+          "visible_filing_label": "Bao cao tai chinh hop nhat quy 1 nam 2025"
+        },
+        "rejection": null,
+        "role": "prior_year_same_quarter",
+        "status": "locked",
+        "warnings": []
+      }
+    ],
+    "status": "confirmed"
+  },
+  "stages": [
+    {
+      "completed_at": "2026-06-20T10:01:10Z",
+      "stage_id": "source_discovery",
+      "started_at": "2026-06-20T10:00:05Z",
+      "status": "completed",
+      "summary": "Discovering target and prior-year source candidates",
+      "warnings": []
+    },
+    {
+      "completed_at": "2026-06-20T10:01:50Z",
+      "stage_id": "source_confirmation",
+      "started_at": "2026-06-20T10:01:10Z",
+      "status": "completed",
+      "summary": "Waiting for source identity confirmation",
+      "warnings": []
+    },
+    {
+      "completed_at": "2026-06-20T10:02:25Z",
+      "counts": {
+        "source_slots_checked": 2,
+        "reusable_report_memory_artifacts": 0,
+        "cache_misses": 0
+      },
+      "stage_id": "cache_lookup",
+      "started_at": "2026-06-20T10:01:50Z",
+      "status": "failed",
+      "summary": "Filing cache lookup blocked by ambiguous source resolution",
+      "warnings": [
+        {
+          "artifact_refs": [],
+          "code": "filing_cache_lookup_ambiguous_source_requires_resolution",
+          "message": "Source selection is ambiguous and requires resolution before analysis can continue",
+          "severity": "warning",
+          "source_slot_role": "target",
+          "stage_id": "cache_lookup"
+        }
+      ]
+    },
+    {
+      "completed_at": null,
+      "stage_id": "extraction",
+      "started_at": null,
+      "status": "cancelled",
+      "summary": null,
+      "warnings": []
+    },
+    {
+      "completed_at": null,
+      "stage_id": "tool_analysis",
+      "started_at": null,
+      "status": "cancelled",
+      "summary": null,
+      "warnings": []
+    },
+    {
+      "completed_at": null,
+      "stage_id": "detector_assessment",
+      "started_at": null,
+      "status": "cancelled",
+      "summary": null,
+      "warnings": []
+    },
+    {
+      "completed_at": null,
+      "stage_id": "aggregation",
+      "started_at": null,
+      "status": "cancelled",
+      "summary": null,
+      "warnings": []
+    },
+    {
+      "completed_at": null,
+      "stage_id": "report_generation",
+      "started_at": null,
+      "status": "cancelled",
+      "summary": null,
+      "warnings": []
+    }
+  ],
+  "status": "failed",
+  "updated_at": "2026-06-20T10:02:25Z",
+  "warnings": [
+    {
+      "artifact_refs": [],
+      "code": "filing_cache_lookup_ambiguous_source_requires_resolution",
+      "message": "Source selection is ambiguous and requires resolution before analysis can continue",
+      "severity": "warning",
+      "source_slot_role": "target",
+      "stage_id": "cache_lookup"
+    }
+  ]
+}

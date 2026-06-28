@@ -1,0 +1,199 @@
+{
+  "_fixture_meta": {
+    "scenario": "live_vietstock_zip_package"
+  },
+  "allowed_actions": [
+    {
+      "action": "confirm_sources",
+      "href": "/runtime-runs/run_20260622_live_zip/source-confirmation",
+      "method": "POST",
+      "scope": {
+        "source_slots": ["target", "prior_year_same_quarter"]
+      }
+    },
+    {
+      "action": "reject_source",
+      "href": "/runtime-runs/run_20260622_live_zip/source-confirmation",
+      "method": "POST",
+      "scope": {
+        "source_slots": ["target", "prior_year_same_quarter"]
+      }
+    },
+    {
+      "action": "stop_run",
+      "href": "/runtime-runs/run_20260622_live_zip/actions/stop",
+      "method": "POST"
+    }
+  ],
+  "can_resume": false,
+  "created_at": "2026-06-22T10:00:00Z",
+  "current_stage": "source_confirmation",
+  "elapsed_seconds": 52,
+  "error": null,
+  "filing_intent": {
+    "company_identifier": "MWG",
+    "company_name_vi": "Cong ty Co phan Dau tu The gioi Di dong",
+    "report_basis_preference": "consolidated",
+    "target_fiscal_year": 2025,
+    "target_quarter": 1
+  },
+  "final_report": {
+    "available": false,
+    "format": null,
+    "generated_at": null,
+    "href": null,
+    "report_id": null
+  },
+  "recoverable": false,
+  "run_id": "run_20260622_live_zip",
+  "runtime_config": {
+    "report_synthesis_model": {
+      "id": "deepseek-v4-flash",
+      "label": "DeepSeek V4 Flash",
+      "provider": "deepseek",
+      "selection": "default"
+    }
+  },
+  "schema_version": "runtime_run_view.v1",
+  "source_confirmation": {
+    "confirmable": true,
+    "hitl_boundary": "source_identity_confirmation_before_extraction_or_cached_reuse",
+    "package_warnings": [
+      {
+        "artifact_refs": [],
+        "code": "vietstock_package_member_selected",
+        "message": "Target source was selected from a Vietstock ZIP package containing multiple documents.",
+        "severity": "info",
+        "source_slot_role": "target",
+        "stage_id": "source_discovery"
+      }
+    ],
+    "slots": [
+      {
+        "candidate": {
+          "audit_references": {
+            "canonical_source_document_id": "src_mwg_2025_q1_consolidated_vi",
+            "event_id": "vietstock_event_mwg_2025_q1",
+            "package_id": "pkg_mwg_2025_q1_consolidated",
+            "source_document_fingerprint_sha256": "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4",
+            "source_container_type": "zip",
+            "source_container_fingerprint_sha256": "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5",
+            "selected_package_member_filename": "MWG_BCTC_HopNhat_Q1_2025.pdf",
+            "selected_package_member_file_size_bytes": "3850000"
+          },
+          "classification_evidence": [
+            "Trang dau hien thi bao cao tai chinh hop nhat quy 1 nam 2025.",
+            "Tep duoc chon tu goi ZIP Vietstock dua tren phan loai tai lieu."
+          ],
+          "company_name_vi": "Cong ty Co phan Dau tu The gioi Di dong",
+          "document_type": "quarterly_bctc",
+          "file_size_bytes": 3850000,
+          "filing_status": "original",
+          "first_page_identity": {
+            "visible_basis_clue": "Hop nhat",
+            "visible_company_name": "Cong ty Co phan Dau tu The gioi Di dong",
+            "visible_period": "Quy 1 nam 2025"
+          },
+          "fiscal_year": 2025,
+          "is_searchable_version": false,
+          "language": "vi",
+          "page_count": 58,
+          "period_label": "Q1 2025",
+          "quarter": 1,
+          "report_basis": "consolidated",
+          "source_document_id": "src_mwg_2025_q1_consolidated_vi",
+          "source_name": "Vietstock",
+          "source_origin": "Vietstock",
+          "source_url": "https://finance.vietstock.vn/data/document/MWG_BCTC_Q1_2025.zip",
+          "ticker": "MWG",
+          "visible_filing_label": "Bao cao tai chinh hop nhat quy 1 nam 2025"
+        },
+        "rejection": null,
+        "role": "target",
+        "status": "ready_for_review",
+        "warnings": [
+          {
+            "artifact_refs": [],
+            "code": "vietstock_package_member_selected",
+            "message": "This PDF was selected from a Vietstock package containing 3 documents.",
+            "severity": "info",
+            "source_slot_role": "target",
+            "stage_id": "source_discovery"
+          }
+        ]
+      },
+      {
+        "candidate": {
+          "audit_references": {
+            "canonical_source_document_id": "src_mwg_2024_q1_consolidated_vi",
+            "event_id": "vietstock_event_mwg_2024_q1",
+            "package_id": "pkg_mwg_2024_q1_consolidated",
+            "source_document_fingerprint_sha256": "e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6"
+          },
+          "classification_evidence": [
+            "Trang dau hien thi bao cao tai chinh hop nhat theo quy.",
+            "Ten tep chua BCTC Q1 2024 MWG."
+          ],
+          "company_name_vi": "Cong ty Co phan Dau tu The gioi Di dong",
+          "document_type": "quarterly_bctc",
+          "file_size_bytes": 3600000,
+          "filing_status": "original",
+          "first_page_identity": {
+            "visible_basis_clue": "Hop nhat",
+            "visible_company_name": "Cong ty Co phan Dau tu The gioi Di dong",
+            "visible_period": "Quy 1 nam 2024"
+          },
+          "fiscal_year": 2024,
+          "is_searchable_version": true,
+          "language": "vi",
+          "page_count": 55,
+          "period_label": "Q1 2024",
+          "quarter": 1,
+          "report_basis": "consolidated",
+          "source_document_id": "src_mwg_2024_q1_consolidated_vi",
+          "source_name": "Vietstock",
+          "source_origin": "Vietstock",
+          "source_url": "https://finance.vietstock.vn/data/document/MWG_BCTC_HN_Q1_2024.pdf",
+          "ticker": "MWG",
+          "visible_filing_label": "Bao cao tai chinh hop nhat quy 1 nam 2024"
+        },
+        "rejection": null,
+        "role": "prior_year_same_quarter",
+        "status": "ready_for_review",
+        "warnings": []
+      }
+    ],
+    "status": "ready_for_review"
+  },
+  "stages": [
+    {
+      "completed_at": "2026-06-22T10:00:52Z",
+      "counts": null,
+      "progress": null,
+      "stage_id": "source_discovery",
+      "started_at": "2026-06-22T10:00:05Z",
+      "status": "completed",
+      "summary": "Live Vietstock source discovery completed",
+      "warnings": []
+    },
+    {
+      "completed_at": null,
+      "counts": null,
+      "progress": null,
+      "stage_id": "source_confirmation",
+      "started_at": "2026-06-22T10:00:52Z",
+      "status": "active",
+      "summary": "Waiting for source identity confirmation",
+      "warnings": []
+    },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "cache_lookup", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "extraction", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "tool_analysis", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "detector_assessment", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "aggregation", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "report_generation", "started_at": null, "status": "pending", "summary": null, "warnings": [] }
+  ],
+  "status": "awaiting_source_confirmation",
+  "updated_at": "2026-06-22T10:00:52Z",
+  "warnings": []
+}

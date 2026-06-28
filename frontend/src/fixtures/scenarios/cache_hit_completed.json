@@ -1,0 +1,241 @@
+{
+  "_fixture_meta": {
+    "scenario": "cache_hit_completed"
+  },
+  "allowed_actions": [
+    {
+      "action": "open_final_report",
+      "href": "/runtime-runs/run_20260617_cache_hit/report",
+      "method": "GET"
+    }
+  ],
+  "can_resume": false,
+  "created_at": "2026-06-17T09:00:00Z",
+  "current_stage": null,
+  "elapsed_seconds": 300,
+  "error": null,
+  "filing_intent": {
+    "company_identifier": "VCF",
+    "company_name_vi": "Cong ty Co phan San xuat Vinacount",
+    "report_basis_preference": "consolidated",
+    "target_fiscal_year": 2025,
+    "target_quarter": 3
+  },
+  "final_report": {
+    "available": true,
+    "format": "json+markdown",
+    "generated_at": "2026-06-17T09:08:00Z",
+    "href": "/runtime-runs/run_20260617_cache_hit/report",
+    "report_id": "FINAL_VINACOUNT_SIGNAL_2025_Q3"
+  },
+  "recoverable": false,
+  "run_id": "run_20260617_cache_hit",
+  "schema_version": "runtime_run_view.v1",
+  "source_confirmation": {
+    "confirmable": false,
+    "hitl_boundary": "source_identity_confirmation_before_extraction_or_cached_reuse",
+    "package_warnings": [],
+    "slots": [
+      {
+        "candidate": {
+          "audit_references": {
+            "canonical_source_document_id": "src_vcf_2025_q3_consolidated_vi",
+            "event_id": "fixture_event_vcf_2025_q3",
+            "package_id": "pkg_vcf_2025_q3_consolidated"
+          },
+          "classification_evidence": [
+            "First page shows consolidated quarterly financial statements.",
+            "Filename contains BCTC Q3 2025."
+          ],
+          "company_name_vi": "Cong ty Co phan San xuat Vinacount",
+          "document_type": "quarterly_bctc",
+          "file_size_bytes": 4219320,
+          "filing_status": "original",
+          "first_page_identity": {
+            "visible_basis_clue": "Hop nhat",
+            "visible_company_name": "Cong ty Co phan San xuat Vinacount",
+            "visible_period": "Quy 3 nam 2025"
+          },
+          "fiscal_year": 2025,
+          "is_searchable_version": true,
+          "language": "vi",
+          "page_count": 64,
+          "period_label": "Q3 2025",
+          "quarter": 3,
+          "report_basis": "consolidated",
+          "source_document_id": "src_vcf_2025_q3_consolidated_vi",
+          "source_name": "Vinacount Fixture Source",
+          "source_origin": "FixtureSpine",
+          "source_url": "https://example.invalid/vcf/2025-q3.pdf",
+          "ticker": "VCF",
+          "visible_filing_label": "Bao cao tai chinh hop nhat quy 3 nam 2025"
+        },
+        "rejection": null,
+        "role": "target",
+        "status": "locked",
+        "warnings": []
+      },
+      {
+        "candidate": {
+          "audit_references": {
+            "canonical_source_document_id": "src_vcf_2024_q3_consolidated_vi",
+            "event_id": "fixture_event_vcf_2024_q3",
+            "package_id": "pkg_vcf_2024_q3_consolidated"
+          },
+          "classification_evidence": [
+            "First page shows consolidated quarterly financial statements.",
+            "Filename contains BCTC Q3 2024."
+          ],
+          "company_name_vi": "Cong ty Co phan San xuat Vinacount",
+          "document_type": "quarterly_bctc",
+          "file_size_bytes": 3982440,
+          "filing_status": "original",
+          "first_page_identity": {
+            "visible_basis_clue": "Hop nhat",
+            "visible_company_name": "Cong ty Co phan San xuat Vinacount",
+            "visible_period": "Quy 3 nam 2024"
+          },
+          "fiscal_year": 2024,
+          "is_searchable_version": true,
+          "language": "vi",
+          "page_count": 61,
+          "period_label": "Q3 2024",
+          "quarter": 3,
+          "report_basis": "consolidated",
+          "source_document_id": "src_vcf_2024_q3_consolidated_vi",
+          "source_name": "Vinacount Fixture Source",
+          "source_origin": "FixtureSpine",
+          "source_url": "https://example.invalid/vcf/2024-q3.pdf",
+          "ticker": "VCF",
+          "visible_filing_label": "Bao cao tai chinh hop nhat quy 3 nam 2024"
+        },
+        "rejection": null,
+        "role": "prior_year_same_quarter",
+        "status": "locked",
+        "warnings": []
+      }
+    ],
+    "status": "confirmed"
+  },
+  "stages": [
+    {
+      "completed_at": "2026-06-17T09:01:10Z",
+      "stage_id": "source_discovery",
+      "started_at": "2026-06-17T09:00:05Z",
+      "status": "completed",
+      "summary": "Discovering target and prior-year source candidates",
+      "warnings": []
+    },
+    {
+      "completed_at": "2026-06-17T09:02:00Z",
+      "stage_id": "source_confirmation",
+      "started_at": "2026-06-17T09:01:10Z",
+      "status": "completed",
+      "summary": "Waiting for source identity confirmation",
+      "warnings": []
+    },
+    {
+      "completed_at": "2026-06-17T09:02:20Z",
+      "counts": {
+        "source_slots_checked": 2,
+        "reusable_report_memory_artifacts": 2,
+        "cache_misses": 0
+      },
+      "stage_id": "cache_lookup",
+      "started_at": "2026-06-17T09:02:00Z",
+      "status": "completed",
+      "summary": "Checking reusable ReportMemory artifacts",
+      "warnings": [
+        {
+          "artifact_refs": [],
+          "code": "filing_cache_lookup_report_memory_reusable",
+          "message": "Validated filing memory reused; extraction skipped",
+          "severity": "info",
+          "stage_id": "cache_lookup"
+        }
+      ]
+    },
+    {
+      "completed_at": "2026-06-17T09:02:20Z",
+      "counts": {
+        "report_memory_artifacts_reused": 2,
+        "live_extraction_runs": 0
+      },
+      "stage_id": "extraction",
+      "started_at": "2026-06-17T09:02:20Z",
+      "status": "skipped",
+      "summary": "Extraction skipped; validated ReportMemory reused",
+      "warnings": [
+        {
+          "artifact_refs": [],
+          "code": "cache_reused_report_memory_artifacts",
+          "message": "Filing memory artifacts reused from validated cache",
+          "severity": "info",
+          "stage_id": "extraction"
+        }
+      ]
+    },
+    {
+      "completed_at": "2026-06-17T09:04:50Z",
+      "counts": {
+        "candidate_risks": 3,
+        "tool_findings": 5
+      },
+      "stage_id": "tool_analysis",
+      "started_at": "2026-06-17T09:04:00Z",
+      "status": "completed",
+      "summary": "Running deterministic accounting checks",
+      "warnings": []
+    },
+    {
+      "completed_at": "2026-06-17T09:06:30Z",
+      "counts": {
+        "packets_total": 3,
+        "packets_valid": 3
+      },
+      "stage_id": "detector_assessment",
+      "started_at": "2026-06-17T09:04:50Z",
+      "status": "completed",
+      "summary": "Assessing evidence packets",
+      "warnings": []
+    },
+    {
+      "completed_at": "2026-06-17T09:07:05Z",
+      "counts": {
+        "grouped_findings": 2,
+        "weak_signals": 1
+      },
+      "stage_id": "aggregation",
+      "started_at": "2026-06-17T09:06:30Z",
+      "status": "completed",
+      "summary": "Aggregating supported risk signals",
+      "warnings": []
+    },
+    {
+      "completed_at": "2026-06-17T09:08:00Z",
+      "stage_id": "report_generation",
+      "started_at": "2026-06-17T09:07:05Z",
+      "status": "completed",
+      "summary": "Generating the final report endpoint payload",
+      "warnings": []
+    }
+  ],
+  "status": "completed",
+  "updated_at": "2026-06-17T09:05:00Z",
+  "warnings": [
+    {
+      "artifact_refs": [],
+      "code": "filing_cache_lookup_report_memory_reusable",
+      "message": "Validated filing memory reused; extraction skipped",
+      "severity": "info",
+      "stage_id": "cache_lookup"
+    },
+    {
+      "artifact_refs": [],
+      "code": "cache_reused_report_memory_artifacts",
+      "message": "Filing memory artifacts reused from validated cache",
+      "severity": "info",
+      "stage_id": "extraction"
+    }
+  ]
+}

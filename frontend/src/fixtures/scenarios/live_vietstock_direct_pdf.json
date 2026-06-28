@@ -1,0 +1,177 @@
+{
+  "_fixture_meta": {
+    "scenario": "live_vietstock_direct_pdf"
+  },
+  "allowed_actions": [
+    {
+      "action": "confirm_sources",
+      "href": "/runtime-runs/run_20260622_live_direct/source-confirmation",
+      "method": "POST",
+      "scope": {
+        "source_slots": ["target", "prior_year_same_quarter"]
+      }
+    },
+    {
+      "action": "reject_source",
+      "href": "/runtime-runs/run_20260622_live_direct/source-confirmation",
+      "method": "POST",
+      "scope": {
+        "source_slots": ["target", "prior_year_same_quarter"]
+      }
+    },
+    {
+      "action": "stop_run",
+      "href": "/runtime-runs/run_20260622_live_direct/actions/stop",
+      "method": "POST"
+    }
+  ],
+  "can_resume": false,
+  "created_at": "2026-06-22T10:00:00Z",
+  "current_stage": "source_confirmation",
+  "elapsed_seconds": 45,
+  "error": null,
+  "filing_intent": {
+    "company_identifier": "FPT",
+    "company_name_vi": "Cong ty Co phan FPT",
+    "report_basis_preference": "consolidated",
+    "target_fiscal_year": 2025,
+    "target_quarter": 2
+  },
+  "final_report": {
+    "available": false,
+    "format": null,
+    "generated_at": null,
+    "href": null,
+    "report_id": null
+  },
+  "recoverable": false,
+  "run_id": "run_20260622_live_direct",
+  "runtime_config": {
+    "report_synthesis_model": {
+      "id": "deepseek-v4-flash",
+      "label": "DeepSeek V4 Flash",
+      "provider": "deepseek",
+      "selection": "default"
+    }
+  },
+  "schema_version": "runtime_run_view.v1",
+  "source_confirmation": {
+    "confirmable": true,
+    "hitl_boundary": "source_identity_confirmation_before_extraction_or_cached_reuse",
+    "package_warnings": [],
+    "slots": [
+      {
+        "candidate": {
+          "audit_references": {
+            "canonical_source_document_id": "src_fpt_2025_q2_consolidated_vi",
+            "event_id": "vietstock_event_fpt_2025_q2",
+            "package_id": "pkg_fpt_2025_q2_consolidated",
+            "source_document_fingerprint_sha256": "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2"
+          },
+          "classification_evidence": [
+            "Trang dau hien thi bao cao tai chinh hop nhat theo quy.",
+            "Ten tep chua BCTC Q2 2025 FPT."
+          ],
+          "company_name_vi": "Cong ty Co phan FPT",
+          "document_type": "quarterly_bctc",
+          "file_size_bytes": 5120000,
+          "filing_status": "reviewed",
+          "first_page_identity": {
+            "visible_basis_clue": "Hop nhat",
+            "visible_company_name": "Cong ty Co phan FPT",
+            "visible_period": "Quy 2 nam 2025"
+          },
+          "fiscal_year": 2025,
+          "is_searchable_version": true,
+          "language": "vi",
+          "page_count": 72,
+          "period_label": "Q2 2025",
+          "quarter": 2,
+          "report_basis": "consolidated",
+          "source_document_id": "src_fpt_2025_q2_consolidated_vi",
+          "source_name": "Vietstock",
+          "source_origin": "Vietstock",
+          "source_url": "https://finance.vietstock.vn/data/document/FPT_BCTC_HN_Q2_2025.pdf",
+          "ticker": "FPT",
+          "visible_filing_label": "Bao cao tai chinh hop nhat da soat xet quy 2 nam 2025"
+        },
+        "rejection": null,
+        "role": "target",
+        "status": "ready_for_review",
+        "warnings": []
+      },
+      {
+        "candidate": {
+          "audit_references": {
+            "canonical_source_document_id": "src_fpt_2024_q2_consolidated_vi",
+            "event_id": "vietstock_event_fpt_2024_q2",
+            "package_id": "pkg_fpt_2024_q2_consolidated",
+            "source_document_fingerprint_sha256": "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3"
+          },
+          "classification_evidence": [
+            "Trang dau hien thi bao cao tai chinh hop nhat theo quy.",
+            "Ten tep chua BCTC Q2 2024 FPT."
+          ],
+          "company_name_vi": "Cong ty Co phan FPT",
+          "document_type": "quarterly_bctc",
+          "file_size_bytes": 4800000,
+          "filing_status": "reviewed",
+          "first_page_identity": {
+            "visible_basis_clue": "Hop nhat",
+            "visible_company_name": "Cong ty Co phan FPT",
+            "visible_period": "Quy 2 nam 2024"
+          },
+          "fiscal_year": 2024,
+          "is_searchable_version": true,
+          "language": "vi",
+          "page_count": 68,
+          "period_label": "Q2 2024",
+          "quarter": 2,
+          "report_basis": "consolidated",
+          "source_document_id": "src_fpt_2024_q2_consolidated_vi",
+          "source_name": "Vietstock",
+          "source_origin": "Vietstock",
+          "source_url": "https://finance.vietstock.vn/data/document/FPT_BCTC_HN_Q2_2024.pdf",
+          "ticker": "FPT",
+          "visible_filing_label": "Bao cao tai chinh hop nhat da soat xet quy 2 nam 2024"
+        },
+        "rejection": null,
+        "role": "prior_year_same_quarter",
+        "status": "ready_for_review",
+        "warnings": []
+      }
+    ],
+    "status": "ready_for_review"
+  },
+  "stages": [
+    {
+      "completed_at": "2026-06-22T10:00:45Z",
+      "counts": null,
+      "progress": null,
+      "stage_id": "source_discovery",
+      "started_at": "2026-06-22T10:00:05Z",
+      "status": "completed",
+      "summary": "Live Vietstock source discovery completed",
+      "warnings": []
+    },
+    {
+      "completed_at": null,
+      "counts": null,
+      "progress": null,
+      "stage_id": "source_confirmation",
+      "started_at": "2026-06-22T10:00:45Z",
+      "status": "active",
+      "summary": "Waiting for source identity confirmation",
+      "warnings": []
+    },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "cache_lookup", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "extraction", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "tool_analysis", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "detector_assessment", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "aggregation", "started_at": null, "status": "pending", "summary": null, "warnings": [] },
+    { "completed_at": null, "counts": null, "progress": null, "stage_id": "report_generation", "started_at": null, "status": "pending", "summary": null, "warnings": [] }
+  ],
+  "status": "awaiting_source_confirmation",
+  "updated_at": "2026-06-22T10:00:45Z",
+  "warnings": []
+}
